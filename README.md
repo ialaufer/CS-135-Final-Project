@@ -34,6 +34,9 @@ What is visible to the user will be implemented in the [public folder] (/public)
 We will be using a [controller] (application/controller), [model] (application/model), and [view] (application/view) format.
 
 ### Tasks
-- [ ] Add service
-- [ ]
-- [ ]
+- [ ] GH-1
+- [ ] GH-2
+- [ ] GH-3
+- [ ] GH-4
+- [ ] GH-5
+- [ ] GH-6
