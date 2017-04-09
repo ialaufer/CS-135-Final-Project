@@ -30,11 +30,11 @@ Categories
 - Miscellaneous
 
 ### Project Setup
-What is visible to the user will be implemented in the [public folder] (/public)
-We will be using a [controller] (application/controller), [model] (application/model), and [view] (application/view) format.
+What is visible to the user will be implemented in the public folder.
+We will be using a controller, model, and view format.
 
 ### Tasks
-- [ ] GH-1
+- [ ] GH-1 (https://github.com/ialaufer/CS-135-Final-Project/issues/1)
 - [ ] GH-2
 - [ ] GH-3
 - [ ] GH-4
