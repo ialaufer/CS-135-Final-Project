@@ -5,7 +5,7 @@
 class ShoppingCart {
 	
     // List of products that is used to generate the HTML menu.
-    public static $cookieTypes = Array("food_services" => " Mints",
+    public static $cookieTypes = Array("thinmints" => "Thin Mints",
                                        "samoas" => "Samoas",
                                        "trefoils" => "Trefoils",
                                        "lemoncreme" => "Lemon Chalet Cremes",
