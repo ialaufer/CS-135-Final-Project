@@ -5,14 +5,14 @@
 class ShoppingCart {
 	
     // List of products that is used to generate the HTML menu.
-    public static $cookieTypes = Array("thinmints" => "Thin Mints",
-                                       "samoas" => "Samoas",
-                                       "trefoils" => "Trefoils",
-                                       "lemoncreme" => "Lemon Chalet Cremes",
-                                       "dosidos" => "Do-Si-Dos",
-                                       "dulce" => "Dulce de Leche",
-                                       "thanks" => "Thank U Berry Munch",
-                                       "tagalongs" => "Tagalongs"
+    public static $cookieTypes = Array("art" => "Arts & Entertainment",
+                                       "beauty" => "Beauty & Cosmetology",
+                                       "health" => "Health & Medical",
+                                       "event" => "Event Planning",
+                                       "food" => "Food Services",
+                                       "professional" => "Professional Services",
+                                       "religious" => "Religious Services",
+                                       "misc" => "Miscellaneous"
                                        );
 	
     // The array that contains the order
