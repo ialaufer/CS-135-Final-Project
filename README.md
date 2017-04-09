@@ -1,7 +1,7 @@
 # CS-135-Final-Project
 
 ## Description
-We want to make a website for students at the Claremont Colleges to advertise their skills, e.g, hairstyling, makeup, photography, sewing, consulting, etc.  and to look for people with those skills. It would be similar to Yelp, but only for services and for 5C students. User could log in as either customers or service providers.
+We want to make a website for students at the Claremont Colleges to advertise their skills, e.g, hairstyling, makeup, photography, sewing, consulting, etc.  and to look for people with those skills. It would be similar to Yelp, but only for services and for 5C students. User could log in as service provider.
 
 ### Possible Implementations
 For Customers:
@@ -19,5 +19,5 @@ For Service Providers:
 - They can check what appointments they already have
 
 ### Project Setup
-What is visible to the user will be implemented in the [public folder] (public)
-We will be using a controller (application/controller), model (application/model), and view (application/view) format.
+What is visible to the user will be implemented in the [public folder] (/public)
+We will be using a [controller] (application/controller), [model] (application/model), and [view] (application/view) format.
