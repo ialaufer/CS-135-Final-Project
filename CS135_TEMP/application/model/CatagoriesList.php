@@ -1,19 +1,11 @@
 <?php
 
 // Represents the shopping cart for a single session.
-Arts & Entertainment
-Beauty & Cosmetology
-Health and Medical
-Event Planning
-Food Services
-Home Services
-Professional Services
-Religious Services
-Miscellaneous
-class ShoppingCart {
+
+class catagoryList {
 	
     // List of products that is used to generate the HTML menu.
-    public static $cookieTypes = Array("art" => "Arts and Entertainment",
+    public static $catagoryList = Array("art" => "Arts and Entertainment",
                                        "beauty" => "Beauty and Cosmetology",
                                        "health" => "Health and Medical",
                                        "event" => "Event Planning",
@@ -36,20 +28,10 @@ class ShoppingCart {
         return $this->order;
     }
     // Adds an order to the shopping cart.  
-    public function order($variety, $quantity) {
-        $currentQuantity = $this->order[$variety];
-        $currentQuantity += $quantity;
-        $this->order[$variety] = $currentQuantity;
-    }
-
-    public function update($variety, $quantity) {
-      $currentQuantity = $this->order[$variety];
-      $currentQuantity = $quantity;
-      $this->order[$variety] = $currentQuantity;
-      
+    public function insert($catagory, $image) {
+        $this->order[$catagory] = $image;
     }
 	
-
 }
 
 ?>
