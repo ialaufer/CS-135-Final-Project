@@ -1,18 +1,27 @@
 <?php
 
 // Represents the shopping cart for a single session.
-
+Arts & Entertainment
+Beauty & Cosmetology
+Health and Medical
+Event Planning
+Food Services
+Home Services
+Professional Services
+Religious Services
+Miscellaneous
 class ShoppingCart {
 	
     // List of products that is used to generate the HTML menu.
-    public static $cookieTypes = Array("thinmints" => "Thin Mints",
-                                       "samoas" => "Samoas",
-                                       "trefoils" => "Trefoils",
-                                       "lemoncreme" => "Lemon Chalet Cremes",
-                                       "dosidos" => "Do-Si-Dos",
-                                       "dulce" => "Dulce de Leche",
-                                       "thanks" => "Thank U Berry Munch",
-                                       "tagalongs" => "Tagalongs"
+    public static $cookieTypes = Array("art" => "Arts and Entertainment",
+                                       "beauty" => "Beauty and Cosmetology",
+                                       "health" => "Health and Medical",
+                                       "event" => "Event Planning",
+                                       "food" => "Food Services",
+                                       "home" => "Home Services",
+                                       "professional" => "Professional Servies",
+                                       "religious" => "Religious Services",
+                                       "other" => "Miscellaneous"
                                        );
 	
     // The array that contains the order
