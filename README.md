@@ -18,16 +18,16 @@ For Service Providers:
 - They can post their availabilities
 - They can check what appointments they already have
 
-#### Categories
+Categories
 > - Arts & Entertainment
 > - Beauty & Cosmetology
 > - Health and Medical
 > - Event Planning
-Food Services
-Home Services
-Professional Services
-Religious Services
-Miscellaneous
+> - Food Services
+> - Home Services
+> - Professional Services
+> - Religious Services
+> - Miscellaneous
 
 ### Project Setup
 What is visible to the user will be implemented in the [public folder] (/public)
