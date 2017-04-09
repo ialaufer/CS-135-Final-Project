@@ -1,7 +1,7 @@
 # CS-135-Final-Project
 
 ## Description
-We want to make a website for students at the Claremont Colleges to advertise their skills, e.g, hairstyling, makeup, photography, sewing, consulting, etc.  and to look for people with those skills. It would be similar to Yelp, but only for services and for 5C students. User could log in as service provider.
+We want to make a website for students at the Claremont Colleges to advertise their skills, e.g, hairstyling, makeup, photography, sewing, consulting, etc.  and to look for people with those skills. It would be similar to Yelp, but only for services and for 5C students. User can log in as service provider.
 
 ### Possible Implementations
 For Customers:
