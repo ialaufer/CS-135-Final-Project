@@ -19,10 +19,10 @@ For Service Providers:
 - They can check what appointments they already have
 
 #### Categories
-> Arts & Entertainment
-> Beauty & Cosmetology
-> Health and Medical
-> Event Planning
+> - Arts & Entertainment
+> - Beauty & Cosmetology
+> - Health and Medical
+> - Event Planning
 Food Services
 Home Services
 Professional Services
@@ -34,6 +34,6 @@ What is visible to the user will be implemented in the [public folder] (/public)
 We will be using a [controller] (application/controller), [model] (application/model), and [view] (application/view) format.
 
 ### Tasks
-- []
-- []
-- []
+- [ ]
+- [ ]
+- [ ]
