@@ -13,6 +13,7 @@ Miscellaneous
 class ShoppingCart {
 	
     // List of products that is used to generate the HTML menu.
+<<<<<<< HEAD:CS135_TEMP/application/model/CatagoriesList.php
     public static $cookieTypes = Array("art" => "Arts and Entertainment",
                                        "beauty" => "Beauty and Cosmetology",
                                        "health" => "Health and Medical",
@@ -22,6 +23,16 @@ class ShoppingCart {
                                        "professional" => "Professional Servies",
                                        "religious" => "Religious Services",
                                        "other" => "Miscellaneous"
+=======
+    public static $cookieTypes = Array("art" => "Arts & Entertainment",
+                                       "beauty" => "Beauty & Cosmetology",
+                                       "health" => "Health & Medical",
+                                       "event" => "Event Planning",
+                                       "food" => "Food Services",
+                                       "professional" => "Professional Services",
+                                       "religious" => "Religious Services",
+                                       "misc" => "Miscellaneous"
+>>>>>>> master:CS135_TEMP/application/model/cart.php
                                        );
 	
     // The array that contains the order
