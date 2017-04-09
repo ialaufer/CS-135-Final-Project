@@ -34,9 +34,9 @@ What is visible to the user will be implemented in the public folder.
 We will be using a controller, model, and view format.
 
 ### Tasks
-- [ ] GH-1 (https://github.com/ialaufer/CS-135-Final-Project/issues/1)
-- [ ] GH-2
-- [ ] GH-3
-- [ ] GH-4
-- [ ] GH-5
-- [ ] GH-6
+- [ ] [Title page] (https://github.com/ialaufer/CS-135-Final-Project/issues/1)
+- [ ] [Category page] (https://github.com/ialaufer/CS-135-Final-Project/issues/2)
+- [ ] [Request service page] (https://github.com/ialaufer/CS-135-Final-Project/issues/3)
+- [ ] [Provider information] (https://github.com/ialaufer/CS-135-Final-Project/issues/4)
+- [ ] [Add service] (https://github.com/ialaufer/CS-135-Final-Project/issues/5)
+- [ ] [Individual service page] (https://github.com/ialaufer/CS-135-Final-Project/issues/6)
