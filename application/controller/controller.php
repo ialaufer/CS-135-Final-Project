@@ -1,7 +1,7 @@
 <?php
   
-  include_once("application/model/model.php");
-  include_once("application/view/view.php");
+  include_once("../model/model.php");
+  include_once("../view/view.php");
   if (session_status() != PHP_SESSION_ACTIVE) {
     session_start();
   }

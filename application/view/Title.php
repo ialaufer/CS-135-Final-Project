@@ -4,31 +4,20 @@
 <!-- call getCategory -->
 
 <!DOCTYPE html>
-<html>
+  <head>
+    <title>Creating a drop down</title>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Claremont's Yelp!</title>
-  <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css" >
-  <script src="../public/js/title.js"></script>
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <body>
+    <pre> <?php print_r($_GET);?> </pre>
 
-  <script>
-    $( document ).ready(function() {
+    <?php
 
-      $("#button").on("click", play);
-      getData();
-    });
-    </script>
+    if ( isset( $_GET['submitted'] ) )
+      handle_form( $_GET['categories'] );
+    
+    display_category( "categories" );
 
-</head>
-
-<body class="container-fluid margin" >
-
-  <div class="jumbotron" > 
-        <div class="container">
-          <h1 class="display-3">Claremont's Yelp!</h1>
-        </div>
-  </div>
-
-<div id="placeholder" > </div>
+    ?>
+  </body>
+</html>

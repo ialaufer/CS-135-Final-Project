@@ -1,30 +1,10 @@
 
 <?php
 	include('dbconn.php');
-?>
 
-<!DOCTYPE html>
-	<head>
-		<title>Creating a drop down</title>
-	</head>
+class Model{
 
-	<body>
-		<pre> <?php print_r($_GET);?> </pre>
-
-		<?php
-
-		if ( isset( $_GET['submitted'] ) )
-			handle_form( $_GET['categories'] );
-		
-		display_category( "categories" );
-
-		?>
-	</body>
-</html>
-
-
-
-<?php
+	public function __construct()  { }
 //add_item
 //add_customer
 //add_provider
@@ -33,62 +13,64 @@
 //send_category
 //handle_
 
-function handle_form( $id ){
-	echo "**********CATEOGRY************** <br><br>";
-	$dbc    = connect_to_db( "serviceitems" );	
-	$query  = "SELECT * FROM CATEGORY WHERE id = $id ";
-	$result = perform_query( $dbc, $query );
+	public function handle_form( $id ){
+		echo "**********CATEGORY************** <br><br>";
+		$dbc    = connect_to_db( "serviceitems" );	
+		$query  = "SELECT * FROM CATEGORY WHERE id = $id ";
+		$result = perform_query( $dbc, $query );
 
-	#$row = mysqli_fetch_array( $result, MYSQLI_ASSOC );
-	
-	#echo "********** <br>";
-	#print_r($row);
-	#echo "********** <br>";
-	echo "<ul>\n";
-	while ( $row = mysqli_fetch_array( $result, MYSQLI_ASSOC ) ) {
-			
-		$categoryname = $row['id'];
-		$cateogryid  = $row['year'];
-			   
-		echo "<li>Title: $title, Year: $year, Director: $director </li>\n";
-	}
-	echo "</ul>\n";
-	
-	disconnect_from_db( $dbc, $result );
-}
-
-function send_category( $id ){
-
-}
-
-
-
-function display_category( $menuname ){
-	echo '<form method = "get">';
-	create_select( $menuname );
-	echo '<input type="submit" name="submitted" value="Go!"></form>';
-}
-
-function get_category( $menuname ){
-	echo "<select name= '$menuname'>\n";
-	$dbc    = connect_to_db( "serviceitems" );	
-	$query  = "SELECT * FROM CATEGORY";
-	$result = perform_query( $dbc, $query );
-	
-	while ($row = mysqli_fetch_array( $result, MYSQLI_ASSOC )){
-	
-		$categoryname = $row['name'];
-		$cateogryid  = $row['id'];
-		$imagepath = $row['imagepath'];
-	   
-	   	if ( isset( $_GET[$menuname] ) && ( $_GET[$menuname]==$cateogryid ) )
-			echo "<option value = '$cateogryid' selected> $categoryname  </option>\n"; 
-		//how to do on-click 
-		else
-			echo "<option value = '$cateogryid'> $categoryname  </option>\n";
-	}
+		#$row = mysqli_fetch_array( $result, MYSQLI_ASSOC );
 		
-	echo "</select>";
-	disconnect_from_db( $dbc, $result );
+		#echo "********** <br>";
+		#print_r($row);
+		#echo "********** <br>";
+		echo "<ul>\n";
+		while ( $row = mysqli_fetch_array( $result, MYSQLI_ASSOC ) ) {
+				
+			$categoryname = $row['id'];
+			$categoryid  = $row['year'];
+				   
+			echo "<li>Title: $title, Year: $year, Director: $director </li>\n";
+		}
+		echo "</ul>\n";
+		
+		disconnect_from_db( $dbc, $result );
+	}
+
+	public function send_category( $id ){
+
+	}
+
+
+
+	public function display_category( $menuname ){
+		echo '<form method = "get">';
+		create_select( $menuname );
+		echo '<input type="submit" name="submitted" value="Go!"></form>';
+	}
+
+	public function get_category( $menuname ){
+		echo "<select name= '$menuname'>\n";
+		$dbc    = connect_to_db( "serviceitems" );	
+		$query  = "SELECT * FROM CATEGORY";
+		$result = perform_query( $dbc, $query );
+		
+		while ($row = mysqli_fetch_array( $result, MYSQLI_ASSOC )){
+		
+			$categoryname = $row['name'];
+			$categoryid  = $row['id'];
+			$imagepath = $row['imagepath'];
+		   
+		   	if ( isset( $_GET[$menuname] ) && ( $_GET[$menuname]==$categoryid ) )
+				echo "<option value = '$categoryid' selected> $categoryname  </option>\n"; 
+			//how to do on-click 
+			else
+				echo "<option value = '$categoryid'> $categoryname  </option>\n";
+		}
+			
+		echo "</select>";
+		disconnect_from_db( $dbc, $result );
+	}
 }
 
+?>
