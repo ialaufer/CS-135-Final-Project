@@ -20,31 +20,54 @@ CREATE TABLE Customer(
 	 phone INT NOT NULL
 );
 
+
+
 CREATE TABLE ServiceItem(
 	 id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	 providerId INT UNSIGNED NOT NULL,
-	 FOREIGN KEY (providerId) REFERENCES Provider(id)
+	 FOREIGN KEY (providerId) REFERENCES Provider(id),
 	 name VARCHAR(256) NOT NULL,
 	 description VARCHAR(256) NOT NULL,
 	 categoryId INT UNSIGNED NOT NULL,
-	 FOREIGN KEY (categoryId) REFERENCES Category(id)
-	 price VARCHAR(256) NOT NULL,
+	 FOREIGN KEY (categoryId) REFERENCES Category(id),
+	 price VARCHAR(256) NOT NULL
 );
 
-CREATE TABLE Category(
-	 id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	 subcategory VARCHAR(256)
-);
+
 
 CREATE TABLE BookOrder(
-	cid INT UNSIGNED NOT NULL PRIMARY KEY ,
-	FOREIGN KEY (providerId) REFERENCES Customer(id)
-	sid INT UNSIGNED NOT NULL PRIMARY KEY ,
-	FOREIGN KEY (providerId) REFERENCES ServiceItem(id)
+	cid INT UNSIGNED NOT NULL,
+	FOREIGN KEY (cid) REFERENCES Customer(id),
+	sid INT UNSIGNED NOT NULL ,
+	FOREIGN KEY (sid) REFERENCES ServiceItem(id),
 );
 
 
+LOAD DATA INFILE "/Applications/MAMP/htdocs/cs135/CS135_TEMP/provider.csv"
+INTO TABLE Provider
+COLUMNS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+(name, email, address, phone)
+;
 
 
-INSERT INTO Provider (name, address, email, phone)
-	VALUES("Michelle", "CMC Stark Hall 600", "xsun17@cmc.edu", "9097891234");
+Describe Category;
+
+LOAD DATA INFILE "/Applications/MAMP/htdocs/cs135/CS135_TEMP/category.csv"
+INTO TABLE Category
+COLUMNS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+(name)
+;
+
+Describe Service;
+
+LOAD DATA INFILE "/Applications/MAMP/htdocs/cs135/CS135_TEMP/service.csv"
+INTO TABLE ServiceItem
+COLUMNS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+(name, description, categoryId, price)
+;
