@@ -1,14 +1,3 @@
-have the getCategory --> use querie
-
-all methods for queries:
-addItem
-getServiceItem
-
-
-can also save session save database info here
--->step before checkout
--->add the item to the cart
-
 
 <?php
 	include('dbconn.php');
@@ -25,9 +14,9 @@ can also save session save database info here
 		<?php
 
 		if ( isset( $_GET['submitted'] ) )
-			handle_form( $_GET['serviceitems'] );
+			handle_form( $_GET['categories'] );
 		
-		display_form( "serviceitems" );
+		display_category( "categories" );
 
 		?>
 	</body>
@@ -40,13 +29,14 @@ can also save session save database info here
 //add_customer
 //add_provider
 //add_requestOrder
-//get_category
+//get_category --> get name and imageaddress
 //send_category
+//handle_
 
 function handle_form( $id ){
-	echo "**********  ************** <br><br>";
-	$dbc    = connect_to_db( "imdb" );	
-	$query  = "SELECT * FROM Movie WHERE movieid = $id ";
+	echo "**********CATEOGRY************** <br><br>";
+	$dbc    = connect_to_db( "serviceitems" );	
+	$query  = "SELECT * FROM CATEGORY WHERE id = $id ";
 	$result = perform_query( $dbc, $query );
 
 	#$row = mysqli_fetch_array( $result, MYSQLI_ASSOC );
@@ -57,9 +47,8 @@ function handle_form( $id ){
 	echo "<ul>\n";
 	while ( $row = mysqli_fetch_array( $result, MYSQLI_ASSOC ) ) {
 			
-		$title = $row['title'];
-		$year  = $row['year'];
-		$director  = $row['director'];
+		$categoryname = $row['id'];
+		$cateogryid  = $row['year'];
 			   
 		echo "<li>Title: $title, Year: $year, Director: $director </li>\n";
 	}
@@ -69,7 +58,7 @@ function handle_form( $id ){
 }
 
 function send_category( $id ){
-	
+
 }
 
 
@@ -83,16 +72,18 @@ function display_category( $menuname ){
 function get_category( $menuname ){
 	echo "<select name= '$menuname'>\n";
 	$dbc    = connect_to_db( "serviceitems" );	
-	$query  = "SELECT name, id FROM CATEGORY";
+	$query  = "SELECT * FROM CATEGORY";
 	$result = perform_query( $dbc, $query );
 	
 	while ($row = mysqli_fetch_array( $result, MYSQLI_ASSOC )){
 	
 		$categoryname = $row['name'];
 		$cateogryid  = $row['id'];
+		$imagepath = $row['imagepath'];
 	   
 	   	if ( isset( $_GET[$menuname] ) && ( $_GET[$menuname]==$cateogryid ) )
-			echo "<option value = '$cateogryid' selected> $categoryname  </option>\n";
+			echo "<option value = '$cateogryid' selected> $categoryname  </option>\n"; 
+		//how to do on-click 
 		else
 			echo "<option value = '$cateogryid'> $categoryname  </option>\n";
 	}

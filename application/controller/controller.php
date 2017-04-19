@@ -16,23 +16,9 @@
 
     public function invoke() {
 
-      $this->view->renderOrderForm();
+      $this->view->renderTitle();
 
-      
-      if($_POST["update"] != null) {
-      
-        $quantity = $_POST["quantity"];
-        $variety = $_POST["variety"];
-        $result = $this->model->updateCart($variety, $quantity);  
-  
-        if(preg_match('/invalid/',$result)) {
-          echo "$result";
-        }
-        else {
-         $this->view->renderCart();
-        }
-
-      }
+    
      //Need to start connecting these to title pages
     }
   }

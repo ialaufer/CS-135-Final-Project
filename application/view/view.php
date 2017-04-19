@@ -6,17 +6,12 @@ class View {
       $this->model = $model;
   } 
 
-	public function renderCart()
+	public function renderTitle()
  	{
- 		  $shoppingCart = $this->model->getCart();
+ 		  //$shoppingCart = $this->model->getCart();
       
-      include_once("viewcart.php");
+      include_once("title.php");
  	}
-
-  public function renderOrderForm()
-  {
-      include_once("orderForm.php");
-  }
  
 }
 
