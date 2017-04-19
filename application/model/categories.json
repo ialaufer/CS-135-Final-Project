@@ -1,0 +1,40 @@
+{
+    "categories": [
+        {
+        "icon": "art.jpg",
+        "type": "Arts and Entertainment"
+        },
+        {
+        "icon": "beauty.jpg",
+        "type": "Beauty and Cosmetology"
+        },
+        {
+        "icon": "health.jpg",
+        "type": "Health and Medical"
+        },
+        {
+        "icon": "event.jpg",
+        "type": "Event Planning"
+        },
+        {
+        "icon": "food.jpg",
+        "type": "Food Services",
+        },
+        {
+        "icon": "home.jpg",
+        "type": "Home Services"
+        },
+        {
+        "icon": "professional.jpg",
+        "type": "Professional Services"
+        },
+        {
+        "icon": "relgious.jpg",
+        "type": "Religious Services"
+        },
+        {
+        "icon": "Miscellaneous.jpg",
+        "type": "Miscellaneous"
+        }
+    ]
+}
