@@ -12,6 +12,14 @@ session_start();
 <title>Provide your information:</title>
 </head>
 
+<style>
+    #note
+    {
+        height:200px;
+        font-size:14pt;
+    }
+</style>
+
 <body>
 
 <form name="checkout" method="post">
@@ -29,8 +37,9 @@ session_start();
         <input type="text" name="phone" id="phone" value="" onBlur="validateField(this)"><span class='info'></span></legend>
 
         <h3>Note to provider:</h3>
-
-        <p><input type="button" value="Submit request" onBlur="sendMessage()"/><span class='info'></span></p>
+        <legend for="note">
+        <input type="text" name="note" id="note" value="" <span class='info'></span></legend>
+        <p><input type="button" value="Submit request" onBlur="sendMessage(note)"/><span class='info'></span></p>
         <p><input type="reset"></p>
   
         
