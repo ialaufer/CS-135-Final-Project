@@ -5,25 +5,6 @@ session_start();
 
 <!DOCTYPE html>
 
-<?php 
-
-// If this session is just beginning, store an empty ShoppingCart in it.
-if (!isset($_SESSION['cart'])) {
-    $_SESSION['cart'] = new ShoppingCart();
-}
-
-// if an update POST request is true
-if ($_POST["update"]) {
-    echo "Form was submitted successfully! <br><br>";
-    print_r($_POST);
-    foreach (ShoppingCart::$cookieTypes as $type => $value) {
-        if ($_POST[$type]) {
-            $quantity = $_POST[$type];
-            $_SESSION['cart']->update($type, $quantity);
-        }
-    }
-}
-?>
 
 <html lang="en">
 
@@ -47,23 +28,25 @@ if ($_POST["update"]) {
         <legend for="phone">Phone
         <input type="text" name="phone" id="phone" value="" onBlur="validateField(this)"><span class='info'></span></legend>
 
-        <p><input type="button" value="Submit request" onBlur="submitOrder()"/><span class='info'></span></p>
+        <h3>Note to provider:</h3>
+
+        <p><input type="button" value="Submit request" onBlur="sendMessage()"/><span class='info'></span></p>
+        <p><input type="reset"></p>
   
         
     </form></fieldset>
 
-<p><?php
-echo "<form method='post' name='updateForm'>";
-echo "<table><tr><td> Type </td><td> Quantity </td></tr>";
-
-// get public version of cart
-
-foreach ($_SESSION['cart']->getOrder() as $type => $quantity ) {
-    echo "<tr><td> $type </td><td> <input text ='text' name='$type' value='$quantity'></input> </td></tr>";
-}
-
-echo "<tr><td></td><td> <input type='submit' value='update' name='update'> </input></td></tr></table></form>";
-?></p>
+<?php
+    function sendMessage($service, $userId, $message) {
+        try {
+            $message = $service->users_messages->send($userId, $message);
+            print 'Message with ID: ' . $message->getId() . ' sent.';
+            return $message;
+        } catch (Exception $e) {
+            print 'An error occurred: ' . $e->getMessage();
+        }
+    }
+?>
 
 <p><a href="application/view/index.php">Look around some more</a></p>
 
