@@ -1,5 +1,5 @@
 <?php 
-require "../application/view/???.php";
+require "../model/model.php";
 session_start(); 
 ?>
 
