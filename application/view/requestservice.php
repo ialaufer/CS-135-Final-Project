@@ -1,5 +1,6 @@
 <?php 
 require "../model/model.php";
+include "../email.php";
 session_start(); 
 ?>
 
@@ -39,23 +40,12 @@ session_start();
         <h3>Note to provider:</h3>
         <legend for="note">
         <input type="text" name="note" id="note" value="" <span class='info'></span></legend>
-        <p><input type="button" value="Submit request" onBlur="sendMessage(note)"/><span class='info'></span></p>
+        <p><input type="button" value="Submit request" onBlur="sendEmail(???, note, name, school, phone, email)"/><span class='info'></span></p>
         <p><input type="reset"></p>
   
         
     </form></fieldset>
 
-<?php
-    function sendMessage($service, $userId, $message) {
-        try {
-            $message = $service->users_messages->send($userId, $message);
-            print 'Message with ID: ' . $message->getId() . ' sent.';
-            return $message;
-        } catch (Exception $e) {
-            print 'An error occurred: ' . $e->getMessage();
-        }
-    }
-?>
 
 <p><a href="application/view/index.php">Look around some more</a></p>
 
