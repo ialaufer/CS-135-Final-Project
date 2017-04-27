@@ -5,7 +5,6 @@ class Model{
 
 	public function __construct()  { 
 	echo "model";
-	
 	}
 //add_item
 //add_customer
@@ -86,6 +85,7 @@ class Model{
 			$categoryid  = $row['id'];
 			$imagepath = $row['imagepath'];
 		   	$arr[$categoryname] = $imagepath;
+
 		}
 			
 		echo "</select>";

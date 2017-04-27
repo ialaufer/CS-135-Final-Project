@@ -2,7 +2,10 @@
   
   include_once("application/model/model.php");
   include_once("application/view/view.php");
+<<<<<<< HEAD
 
+=======
+>>>>>>> f59d0f85f632f4ecc9352ea20450ab6c4e6b2442
 
 
    
@@ -17,7 +20,11 @@
     
     public function invoke() {
 
+<<<<<<< HEAD
       $CategoryResult = $this->model -> get_categories();
+=======
+      $CategoryResult = $model -> get_categories();
+>>>>>>> f59d0f85f632f4ecc9352ea20450ab6c4e6b2442
       $this->view->renderTitle();
 
 
