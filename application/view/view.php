@@ -6,7 +6,7 @@ class View {
       $this->model = $model;
   } 
 
-	public function renderTitle()
+	public function renderTitle($CategoryResult)
  	{
  		  //$shoppingCart = $this->model->getCart();
       

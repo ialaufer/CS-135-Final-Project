@@ -18,7 +18,7 @@
     public function invoke() {
 
       $CategoryResult = $this->model -> get_categories();
-      $this->view->renderTitle();
+      $this->view->renderTitle($CategoryResult);
 
 
       /*

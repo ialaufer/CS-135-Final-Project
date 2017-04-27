@@ -11,15 +11,16 @@
   <link rel ="stylesheet" href="../../public/css/validate.css">
 
   <body>
+    <h1> Claremont Yelp </h1>
     <section id=right>
       <table>
          <?php
               $count = 0;
-              foreach (CategoryResult::$categoryname as $key => $imagepath) {
+              foreach ($CategoryResult as $categoryname => $imagepath) {
               $count++;
-              if ($count mod 2 = 0) {
+              if ($count % 2 == 0) {
                 echo "<tr>
-                        <td id=\"$key\" value=\"$key\">$key</td>
+                        <td id=\"$categoryname\" value=\"$categoryname\">$categoryname</td>
                       </tr>";
               }
             }
@@ -30,11 +31,11 @@
     <table>
          <?php
               $count = 0;
-              foreach (CategoryResult::$categoryname as $key => $imagepath) {
+              foreach ($CategoryResult as $categoryname => $imagepath) {
               $count++;
-              if ($count mod 2 = 1) {
+              if ($count % 2 == 1) {
                 echo "<tr>
-                        <td id=\"$key\" value=\"$key\">$key</td>
+                        <td id=\"$categoryname\" value=\"$categoryname\">$categoryname</td>
                       </tr>";
               }
             }
