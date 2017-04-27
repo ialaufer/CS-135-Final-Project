@@ -88,6 +88,24 @@ class Model{
 		echo "</select>";
 		disconnect_from_db( $dbc, $result );
 	}
+		}
+		public function get_services($imageID){
+		$dbc    = connect_to_db( "serviceitems" );	
+		$query  = "SELECT * FROM ServiceItem WHERE catagoryID == $imageID";
+		$result = perform_query( $dbc, $query );
+		
+		while ($row = mysqli_fetch_array( $result, MYSQLI_ASSOC )){
+		
+			$categoryname = $row['name'];
+			$categoryid  = $row['id'];
+			$imagepath = $row['imagepath'];
+		   
+				echo "<option value = '$categoryid' selected> $categoryname  </option>\n"; 
+		}
+			
+		echo "</select>";
+		disconnect_from_db( $dbc, $result );
+	}
 }
 
 ?>

@@ -22,6 +22,12 @@
       $CategoryResult = $model -> get_categories();
       include_once("../view/view.php");
 
+      if($_POST(image.id.clicked)){
+        $ServiceResult = $model -> get_services(image.id)
+        include_once("../view/Categories.php")
+
+      }
+
      //Need to start connecting these to title pages
     }
 
