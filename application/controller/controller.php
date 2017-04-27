@@ -19,7 +19,7 @@
 
       $this->view->renderTitle();
 
-      $CategoryResult = $model -> getService();
+      $CategoryResult = $model -> get_categories();
       include_once("../view/view.php");
 
      //Need to start connecting these to title pages
