@@ -1,10 +1,11 @@
-
 <?php
 	include('dbconn.php');
 
 class Model{
 
-	public function __construct()  { }
+	public function __construct()  { 
+echo "model";
+	}
 //add_item
 //add_customer
 //add_provider
@@ -70,28 +71,29 @@ class Model{
 			
 		echo "</select>";
 		disconnect_from_db( $dbc, $result );
+
 	}
 		public function get_categories(){
 		$dbc    = connect_to_db( "serviceitems" );	
 		$query  = "SELECT * FROM CATEGORY";
 		$result = perform_query( $dbc, $query );
-		
+		$arr = Array();
 		while ($row = mysqli_fetch_array( $result, MYSQLI_ASSOC )){
 		
 			$categoryname = $row['name'];
 			$categoryid  = $row['id'];
 			$imagepath = $row['imagepath'];
-		   
-				echo "<option value = '$categoryid' selected> $categoryname  </option>\n"; 
+		   	$arr[$categoryname] = $imagepath
 		}
 			
 		echo "</select>";
 		disconnect_from_db( $dbc, $result );
+		return $arr;
 	}
-		}
-		public function get_services($imageID){
+
+		public function get_services($imagecategoryID){
 		$dbc    = connect_to_db( "serviceitems" );	
-		$query  = "SELECT * FROM ServiceItem WHERE catagoryID == $imageID";
+		$query  = "SELECT * FROM ServiceItem WHERE catagoryID == $imagecategoryID";
 		$result = perform_query( $dbc, $query );
 		
 		while ($row = mysqli_fetch_array( $result, MYSQLI_ASSOC )){

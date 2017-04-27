@@ -1,6 +1,7 @@
 <?php
   
-  include_once("../model/model.php");
+  include_once("application/model/model.php");
+  include_once("application/view/view.php");
 
 
   if (session_status() != PHP_SESSION_ACTIVE) {
@@ -11,25 +12,26 @@
     public $model, $view;
  
     public function __construct()  {  
+      echo "constructor";
       $this->model = new Model();
       $this->view = new View($this->model);
     } 
-
+    
     public function invoke() {
 
+      $CategoryResult = $model -> get_categories();
       $this->view->renderTitle();
 
-      $CategoryResult = $model -> get_categories();
-      include_once("../view/view.php");
 
+      /*
       if($_POST(image.id.clicked)){
         $ServiceResult = $model -> get_services(image.id)
         include_once("../view/Categories.php")
-
+      
       }
-
+      
      //Need to start connecting these to title pages
     }
-
-  }
+    */
+  }}
 ?>
