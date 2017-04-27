@@ -38,11 +38,6 @@ CREATE TABLE ServiceItem(
 	 price VARCHAR(256) NOT NULL
 );
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f59d0f85f632f4ecc9352ea20450ab6c4e6b2442
-
 CREATE TABLE BookOrder(
 	cid INT UNSIGNED NOT NULL,
 	FOREIGN KEY (cid) REFERENCES Customer(id),
