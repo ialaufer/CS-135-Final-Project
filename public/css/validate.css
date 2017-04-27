@@ -1,3 +1,14 @@
+#left {
+	position: fixed; 
+	left: 200px;
+}
+
+#right {
+	position: fixed; 
+	right: 200px;
+}
+
+
 .ok, .info, .error {
 	padding: 0px 2px;
 }
