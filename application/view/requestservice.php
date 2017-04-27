@@ -40,7 +40,7 @@ session_start();
         <h3>Note to provider:</h3>
         <legend for="note">
         <input type="text" name="note" id="note" value="" <span class='info'></span></legend>
-        <p><input type="button" value="Submit request" onBlur="sendEmail(???, #note, #name, #school, #phone, #email)"/><span class='info'></span></p>
+        <p><input type="button" value="Submit request" onBlur="sendEmail(getemail(), #note, #name, #school, #phone, #email)"/><span class='info'></span></p>
         <p><input type="reset"></p>
   
         
