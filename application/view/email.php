@@ -1,33 +1,39 @@
 <?php
-   $to ="mariam.salloum@gmail.com";
-   $subject = "Reminder Email";
+function sendEmail($to, $name, $name, $school, $phone, $email)
+    $subject = "Reminder Email";
 
-   $message = "
-      <html>
-         <head> <title>HTML email</title> </head>
-         <body>
-          <p>This email contains HTML Tags!</p>
-          <table>
-            <tr>
-              <th>Firstname</th>
-              <th>Lastname</th>
-            </tr>
-            <tr>
-              <td>John</td>
-              <td>Doe</td>
-            </tr>
-          </table>
-         </body>
-      </html>
-   ";
+    $message = "
+        <html>
+          <head> <title>HTML email</title> </head>
+          <body>
+            <p>This email contains HTML Tags!</p>
+            <table>
+              <tr>
+                <th>Name</th>
+                <th>School</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Note</th>
+              </tr>
+              <tr>
+                <td>$name</td>
+                <td>$school</td>
+                <td>$phone</td>
+                <td>$email</td>
+                <td>$note</td>
+              </tr>
+            </table>
+          </body>
+        </html>
+    ";
 
-// Always set content-type when sending HTML email
-$headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+  // Always set content-type when sending HTML email
+  $headers = "MIME-Version: 1.0" . "\r\n";
+  $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
-// More headers
-$headers .= 'From: <test@cmc.edu>' . "\r\n";
-$headers .= 'Cc: test@cmc.edu' . "\r\n";
+  // More headers
+  $headers .= 'From:' $email . "\r\n";
+  $headers .= 'Cc: claremontyelp@gmail.com' . "\r\n";
 
-mail($to,$subject,$message,$headers);
+  mail($to,$subject,$message,$headers);
 ?>
