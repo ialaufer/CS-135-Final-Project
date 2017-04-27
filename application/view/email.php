@@ -1,12 +1,12 @@
 <?php
-function sendEmail($to, $name, $name, $school, $phone, $email)
-    $subject = "Reminder Email";
+function sendEmail($to, $name, $school, $phone, $email) {
+    $subject = "Claremont Yelp: New Request";
 
     $message = "
         <html>
           <head> <title>HTML email</title> </head>
           <body>
-            <p>This email contains HTML Tags!</p>
+            <p>A new customer has requested your service</p>
             <table>
               <tr>
                 <th>Name</th>
@@ -32,8 +32,8 @@ function sendEmail($to, $name, $name, $school, $phone, $email)
   $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
   // More headers
-  $headers .= 'From:' $email . "\r\n";
-  $headers .= 'Cc: claremontyelp@gmail.com' . "\r\n";
+  $headers .= 'From: claremontyelp@gmail.com' . "\r\n";
+
 
   mail($to,$subject,$message,$headers);
 ?>
