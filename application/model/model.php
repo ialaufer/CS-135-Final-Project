@@ -3,13 +3,9 @@
 
 class Model{
 
-<<<<<<< HEAD
 	public function __construct()  { 
 echo "model";
 	}
-=======
-	function __construct()  { }
->>>>>>> ea9c75e13b7f581a691de8599c511c8235ad88fb
 //add_item
 //add_customer
 //add_provider
@@ -17,7 +13,7 @@ echo "model";
 //get_category --> get name and imageaddress
 //send_category
 //handle_
-
+/*
 	public function handle_form( $id ){
 		echo "**********CATEGORY************** <br><br>";
 		$dbc    = connect_to_db( "serviceitems" );	
@@ -77,6 +73,7 @@ echo "model";
 		disconnect_from_db( $dbc, $result );
 
 	}
+	*/
 		public function get_categories(){
 		$dbc    = connect_to_db( "serviceitems" );	
 		$query  = "SELECT * FROM CATEGORY";
@@ -94,29 +91,7 @@ echo "model";
 		disconnect_from_db( $dbc, $result );
 		return $arr;
 	}
-
-<<<<<<< HEAD
-		public function get_services($imagecategoryID){
-=======
-		public function get_services($imageID){
->>>>>>> ea9c75e13b7f581a691de8599c511c8235ad88fb
-		$dbc    = connect_to_db( "serviceitems" );	
-		$query  = "SELECT * FROM ServiceItem WHERE catagoryID == $imagecategoryID";
-		$result = perform_query( $dbc, $query );
-		
-		while ($row = mysqli_fetch_array( $result, MYSQLI_ASSOC )){
-		
-			$categoryname = $row['name'];
-			$categoryid  = $row['id'];
-			$imagepath = $row['imagepath'];
-		   
-				echo "<option value = '$categoryid' selected> $categoryname  </option>\n"; 
-		}
-			
-		echo "</select>";
-		disconnect_from_db( $dbc, $result );
-	}
-	public function get_email(){
+		public function get_email(){
 		$dbc    = connect_to_db( "serviceitems" );	
 		$query  = "SELECT * FROM PROVIDER";
 		$result = perform_query( $dbc, $query );
@@ -133,6 +108,24 @@ echo "model";
 		echo "</select>";
 		disconnect_from_db( $dbc, $result );
 	}
+	/*
+		public function get_services($imagecategoryID){
+		$dbc    = connect_to_db( "serviceitems" );	
+		$query  = "SELECT * FROM ServiceItem WHERE catagoryID == $imagecategoryID";
+		$result = perform_query( $dbc, $query );
+		
+		while ($row = mysqli_fetch_array( $result, MYSQLI_ASSOC )){
+		
+			$categoryname = $row['name'];
+			$categoryid  = $row['id'];
+			$imagepath = $row['imagepath'];
+		   
+				echo "<option value = '$categoryid' selected> $categoryname  </option>\n"; 
+		}
+			
+		echo "</select>";
+		disconnect_from_db( $dbc, $result );
+	}*/
 }
 
 ?>
