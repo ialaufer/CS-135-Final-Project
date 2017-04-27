@@ -1,7 +1,8 @@
 <?php
   
   include_once("../model/model.php");
-  include_once("../view/view.php");
+
+
   if (session_status() != PHP_SESSION_ACTIVE) {
     session_start();
   }
@@ -18,8 +19,11 @@
 
       $this->view->renderTitle();
 
-    
+      $CategoryResult = $model -> getService();
+      include_once("../view/view.php");
+
      //Need to start connecting these to title pages
     }
+
   }
 ?>
