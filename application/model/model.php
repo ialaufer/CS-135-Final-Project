@@ -1,10 +1,9 @@
-
 <?php
 	include('dbconn.php');
 
 class Model{
 
-	public function __construct()  { }
+	function __construct()  { }
 //add_item
 //add_customer
 //add_provider

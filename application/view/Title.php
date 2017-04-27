@@ -15,7 +15,7 @@
       <table>
          <?php
               $count = 0;
-              foreach (CategoryResult::$cname as $key => $imagepath) {
+              foreach (CategoryResult::$categoryname as $key => $imagepath) {
               $count++;
               if ($count mod 2 = 0) {
                 echo "<tr>
@@ -30,7 +30,7 @@
     <table>
          <?php
               $count = 0;
-              foreach (CategoryResult::$cname as $key => $imagepath) {
+              foreach (CategoryResult::$categoryname as $key => $imagepath) {
               $count++;
               if ($count mod 2 = 1) {
                 echo "<tr>
