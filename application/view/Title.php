@@ -9,6 +9,8 @@
     <title>Claremont Yelp</title> 
   </head>
   <link rel ="stylesheet" href="../../public/css/validate.css">
+  <link rel="stylesheet" href="startbootstrap-shop-homepage-gh-pages/css/bootstrap.min.css" >
+
 
   <body>
     <h1> Claremont Yelp </h1>
