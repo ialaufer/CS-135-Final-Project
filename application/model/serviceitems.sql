@@ -50,7 +50,7 @@ LOAD DATA INFILE "/Applications/MAMP/htdocs/CS-135-Final-Project/application/mod
 INTO TABLE Provider
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
+LINES TERMINATED BY '\r'
 (name, email, address, phone)
 ;
 
@@ -60,7 +60,7 @@ Describe Category;
 LOAD DATA INFILE "/Applications/MAMP/htdocs/CS-135-Final-Project/application/model/category.csv"
 INTO TABLE Category
 COLUMNS TERMINATED BY ','
-LINES TERMINATED BY '\n\r'
+LINES TERMINATED BY '\r'
 (name, imagepath)
 ;
 
@@ -70,7 +70,7 @@ LOAD DATA INFILE "/Applications/MAMP/htdocs/CS-135-Final-Project/application/mod
 INTO TABLE ServiceItem
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
+LINES TERMINATED BY '\r'
 (providerId, name, description, categoryId, price)
 
 ;
