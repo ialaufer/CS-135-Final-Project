@@ -6,7 +6,7 @@ function sendEmail($to, $name, $school, $phone, $email) {
         <html>
           <head> <title>HTML email</title> </head>
           <body>
-            <p>A new customer has requested your service</p>
+            <p>A new customer has requested your service!</p>
             <table>
               <tr>
                 <th>Name</th>
