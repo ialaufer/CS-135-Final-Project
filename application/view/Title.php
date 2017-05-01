@@ -9,13 +9,15 @@
     <title>Claremont Yelp</title> 
   </head>
   
+
   <!--<link rel ="stylesheet" href="../../public/css/validate.css"> -->
   <link rel="stylesheet" href="/Applications/MAMP/htdocs/cs135/GITHUB_REPO/CS-135-Final-Project/startbootstrap-shop-homepage-gh-pages/css/bootstrap.css " >
+
    
   <body>
     <h1> Claremont Yelp </h1>
     
-    <form method="post">
+    <form method="post" action="application/view/list.php">
     <table>
     <tr>
       <?php 
@@ -31,8 +33,6 @@
     </tr>
     </table>
     </form>
-    <body>
-
 
 
     
