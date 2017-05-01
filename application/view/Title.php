@@ -9,12 +9,8 @@
     <title>Claremont Yelp</title> 
   </head>
   
-  <link rel ="stylesheet" href="../../public/css/validate.css">
-<<<<<<< HEAD
-  <link rel="stylesheet" href="startbootstrap-shop-homepage-gh-pages/css/shop-homepage.css" >
-=======
-  <link rel="stylesheet" href="startbootstrap-shop-homepage-gh-pages/css/shop-homepages.css" >
->>>>>>> 6b22d7fadd26af4745b030ce53d9bb19223b2719
+  <link rel ="stylesheet" href="../../public/css/bootstrap.css">
+
 
 
 <!--   <body>
