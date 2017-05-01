@@ -46,7 +46,7 @@ CREATE TABLE BookOrder(
 );
 
 
-LOAD DATA INFILE "/Applications/MAMP/htdocs/CS-135-Final-Project/application/model/provider.csv"
+LOAD DATA INFILE "/Applications/MAMP/htdocs/cs135/GITHUB_REPO/CS-135-Final-Project/application/model/provider.csv"
 INTO TABLE Provider
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
@@ -57,7 +57,7 @@ LINES TERMINATED BY '\r'
 
 Describe Category;
 
-LOAD DATA INFILE "/Applications/MAMP/htdocs/CS-135-Final-Project/application/model/category.csv"
+LOAD DATA INFILE "/Applications/MAMP/htdocs/cs135/GITHUB_REPO/CS-135-Final-Project/application/model/category.csv"
 INTO TABLE Category
 COLUMNS TERMINATED BY ','
 LINES TERMINATED BY '\r'
@@ -66,7 +66,7 @@ LINES TERMINATED BY '\r'
 
 Describe ServiceItem;
 
-LOAD DATA INFILE "/Applications/MAMP/htdocs/CS-135-Final-Project/application/model/serviceitem.csv"
+LOAD DATA INFILE "/Applications/MAMP/htdocs/cs135/GITHUB_REPO/CS-135-Final-Project/application/model/serviceitem.csv"
 INTO TABLE ServiceItem
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'

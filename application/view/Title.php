@@ -9,73 +9,29 @@
     <title>Claremont Yelp</title> 
   </head>
   
-  <link rel ="stylesheet" href="../../public/css/validate.css">
-  <link rel="stylesheet" href="startbootstrap-shop-homepage-gh-pages/css/shop-homepages.css" >
-
-
-<!--   <body>
-    <h1> Claremont Yelp </h1>
-   <section id=right>
-      <table>
-         <?php
-            //   $count = 0;
-            //  foreach ($CategoryResult as $categoryname => $imagepath) {
-            //   $count++;
-            //   if ($count % 2 == 0) {
-            //     echo "<tr>
-            //             <td id=\"$categoryname\" value=\"$categoryname\">$categoryname</td>
-            //           </tr>";
-            //   }
-            // }
-         ?>
-        </table>
-    </section>
-    <section id= left>
-    <table>
-         <?php
-            //   $count = 0;
-            //   foreach ($CategoryResult as $categoryname => $imagepath) {
-            //   $count++;
-            //   if ($count % 2 == 1) {
-            //     echo "<tr>
-            //             <td id=\"$categoryname\" value=\"$categoryname\">$categoryname</td>
-            //           </tr>";
-            //   }
-            // }
-         ?>
-        </table>   
-    </section> -->
-
+  <!--<link rel ="stylesheet" href="../../public/css/validate.css"> -->
+  <link rel="stylesheet" href="/Applications/MAMP/htdocs/cs135/GITHUB_REPO/CS-135-Final-Project/startbootstrap-shop-homepage-gh-pages/css/bootstrap.css " >
    
-
+  <body>
+    <h1> Claremont Yelp </h1>
+    
     <form method="post">
     <table>
     <tr>
-
-
       <?php 
             foreach ($CategoryResult as $categoryname => $imagepath) {
                 echo " <td align='center' valign='center'>
-                          <input type='image' src=$imagepath name=$categoryname value='<?php echo $info[0]; ?>' >
-                       <br /> Caption text centered under the image. </td>
+                          <input type='image' src=$imagepath name=$categoryname style=width:150px;height:150px;
+                          value='<?php echo $info[0]; ?>' >
+                       <br /> $categoryname </td>
                 ";
             }
       ?>
 
-
-<!--     <td align="center" valign="center">
-     <?php 
-            // foreach ($CategoryResult as $categoryname => $imagepath) {
-            //     echo "<img src=$imagepath alt=$categoryname name= style='width:128px;height:128px;''>";
-            // }
-      ?>
-    <br />
-    Caption text centered under the image.
-    </td> -->
-
     </tr>
     </table>
     </form>
+    <body>
 
 
 

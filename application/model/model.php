@@ -95,7 +95,7 @@ class Model{
 
 
 		public function get_selectedCategory() {
-			$selectedCategory=$_POST["selectedCategory"];
+			$selectedCategory=$_POST["categoryname"];
 			disconnect_from_db( $dbc, $result );
 			return $selectedCategory;
 	}
