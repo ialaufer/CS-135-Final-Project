@@ -13,6 +13,13 @@ class View {
       include_once("title.php");
  	}
  
+	public function renderList($CategoryResult, $CategorySelected)
+ 	{
+ 		  //$shoppingCart = $this->model->getCart();
+      include_once("list.php");
+ 	}
+ 
+
 }
 
 ?>

@@ -21,17 +21,14 @@
       $this->view->renderTitle($CategoryResult);
 
 
-      // if statment to check the size of $_GET array 
-      // if size of array > 1, then call renderList ...
-
-      /*foreach ($_GET as $key => value) {
-        if ($key in $CategoryResult ) {
+      foreach ($_GET as $key => $value) {
+        if (in_array($key,$CategoryResult)) {
 
           $this->view->renderList($CategoryResult, $key);
 
         }
 
-      }*/
+      }
 
 
         

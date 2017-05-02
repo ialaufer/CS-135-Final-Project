@@ -45,7 +45,7 @@ li a:hover:not(.active) {
 <ul>
 <?php
   foreach ($CategoryResult as $categoryname => $imagepath) {
-    if ($categoryname == get_selectedCategory()) {
+    if ($categoryname == $CategorySelected) {
       echo "<li><a class='active' href='#home'>$categoryname</a></li>";
     }
     else {
@@ -56,7 +56,7 @@ li a:hover:not(.active) {
 </ul>
 
 <div style="margin-left:25%;padding:1px 16px;height:1000px;">
-  <h2>$categoryname </h2>
+  <h2>$CategorySelected </h2>
   <h3>Some heading</h3>
   <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
   <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p>

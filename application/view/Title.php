@@ -11,20 +11,20 @@
   
 
   <!--<link rel ="stylesheet" href="../../public/css/validate.css"> -->
-  <link rel="stylesheet" href="/Applications/MAMP/htdocs/cs135/GITHUB_REPO/CS-135-Final-Project/startbootstrap-shop-homepage-gh-pages/css/bootstrap.min.css " >
+  <link rel="stylesheet" href="/Applications/MAMP/htdocs/cs135/GITHUB_REPO/CS-135-Final-Project/startbootstrap-shop-homepage-gh-pages/css/shop-homepage.css " >
 
    
   <body>
     <h1> Claremont Yelp </h1>
     
-    <form method="get" action="application/view/list.php">
+    <form method="get">
     <table style='width:750px;'>
     <tr>
       <?php 
+
             foreach ($CategoryResult as $categoryname => $imagepath) {
                 echo " <td align='center' valign='center'>
-                          <input type='image' src='$imagepath' name='$categoryname' style='width:150px;height:150px;'
-                          value='<?php echo $info[0]; ?>' >
+                          <input type='image' src='$imagepath' name='$categoryname' style='width:150px;height:150px;'>
                        <br /> $categoryname </td>
                 ";
             }
