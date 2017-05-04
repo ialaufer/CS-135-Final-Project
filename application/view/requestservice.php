@@ -77,7 +77,7 @@ function sendEmail() {
         <legend for="note">
         <input type="text" name="note" id="note" value="" <span class='info'></span></legend>
         <p><input type="submit" value="Submit request" onBlur="sendEmail()"/><span class='info'></span>
-        <input type="submit"></p>
+        <input type="submit" value="Reset"></p>
   
         
     </form></div>
