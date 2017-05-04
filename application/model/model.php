@@ -63,7 +63,7 @@ class Model{
 				$categoryId = $row['categoryId'];
 				$servicePrice= $row['servicePrice'];
 
-				
+				$name = str_replace(' ', '_', $serviceItemName);
 				$display[$serviceItemName] = "<div class='list items'>
 				<h3 class='service'>$serviceItemName</h3>
 				<h4 class='providerInformation'>Provider information:</h4>
@@ -78,7 +78,7 @@ class Model{
 				</div>
 				<div style='text-align:center'>
 				<form method='get'>
-    			<button style='font-family:avenir-roman; background-color: green; color:white ' class='w3-circle' type='submit' style='width:150px;height:50px;background-color: #4CAF50;' name='book' value =$serviceItemName;>Book Service</button>
+    			<button style='font-family:avenir-roman; background-color: green; color:white ' class='w3-circle' type='submit' style='width:150px;height:50px;background-color: #4CAF50;' name='book' value =$name;>Book Service</button>
    				</form>
    				</div>
 				\n";

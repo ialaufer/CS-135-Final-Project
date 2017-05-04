@@ -32,7 +32,6 @@
             $this->view->renderRequest($name);
         }
         
-        echo "$_GET" ."[get]";
         foreach ($_GET as $key => $cid) {
           $name = str_replace('_', ' ', $key);
           if (array_key_exists($name, $CategoryResult)) {
