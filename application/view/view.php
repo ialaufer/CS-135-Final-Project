@@ -20,7 +20,7 @@ class View {
 
  	public function renderAdd()
  	{
-      include_once("addservce.php");
+      include_once("addservice.php");
  	}
  
 

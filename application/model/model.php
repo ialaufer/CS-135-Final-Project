@@ -141,7 +141,7 @@ class Model{
 					$providerName<br>
 					$providerAddress<br>
 					$providerEmail<br>
-					$ProviderPhone<br>
+					$providerPhone<br>
 				<p> 
 				<p class='description'>$serviceDescription</p>
 				<p class='price'>Price: $servicePrice</p>
