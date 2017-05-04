@@ -52,10 +52,9 @@ li a:hover:not(.active) {
 </ul>
 
 <div style="margin-left:25%;padding:1px 16px;height:1000px;">
-  <h1>List Page</h1>
 <?php
   $name = $string = str_replace('_', ' ', $CategorySelected);
-  echo "<h2> $name </h2>" 
+  echo "<h1> $name </h1>" 
   ?>
   <?php
   foreach ($ListResult as $key => $display) {

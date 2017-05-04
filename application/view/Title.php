@@ -25,10 +25,11 @@ button:hover {
 }
 .Centered{
   text-align: center;
+  margin: auto;
 }
   </style>
   <head>
-    <title>Claremont Yelp</title> 
+    <title>Claremont's Yelp!</title> 
   </head>
   
 
@@ -37,9 +38,10 @@ button:hover {
 
    
   <body class="Heading" >
-    <h1 class="Centered"> Claremont Yelp </h1>
+    <h1 class="Centered"> Claremont's Yelp! </h1>
+    <div class="Centered">
     <form method="get">
-    <table style='width:750px;'>
+    <table class="Centered" centered style='width:750px;'>
     <tr>
       <?php 
             $counter = 0;
@@ -60,9 +62,9 @@ button:hover {
     </tr>
     </table>
     </form>
-
+  </div>
     <form method="get">
-    <button type="submit" style='width:750px;height:50px;background-color: #4CAF50;' name="add";>Add New Service</button>
+    <button type="submit" style='width:750px;font-family:avenir-roman;height:50px;background-color: #4CAF50;' name="add";>Add New Service</button>
     </form>
   </body>
 </html>
