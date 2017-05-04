@@ -64,7 +64,7 @@ button:hover {
     </form>
   </div>
     <form method="get">
-    <button type="submit" style='width:750px;font-family:avenir-roman;height:50px;background-color: #4CAF50;' name="add";>Add New Service</button>
+    <button type="submit" style='font-size: 115%;width:750px;font-family:avenir-roman;height:50px;background-color: #4CAF50;' name="add";>Add New Service</button>
     </form>
   </body>
 </html>

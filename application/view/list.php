@@ -56,6 +56,7 @@ li a:hover:not(.active) {
 <body>
 
 <ul>
+  <h3 style='margin-left:5%;'>Claremont's Yelp!</h3>
 <?php
   foreach ($CategoryResult as $categoryname => $value) {
     if ($categoryname == str_replace('_', ' ', $CategorySelected)){
