@@ -31,7 +31,11 @@
             $name = str_replace(';', '', $name);
             $this->view->renderRequest($name);
         }
+<<<<<<< HEAD
+        
+=======
 
+>>>>>>> c9ac4dd97245eff8e9af4a3119fc06b32fb4644c
         foreach ($_GET as $key => $cid) {
           $name = str_replace('_', ' ', $key);
           if (array_key_exists($name, $CategoryResult)) {
