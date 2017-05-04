@@ -60,7 +60,6 @@ li a:hover:not(.active) {
   <h1>List Page</h1>
 <?php
   $name = $string = str_replace('_', ' ', $CategorySelected);
-  echo "<h2> $name </h2>" 
 ?>
   <h3>Some heading</h3>
   <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
