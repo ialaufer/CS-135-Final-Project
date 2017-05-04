@@ -12,9 +12,8 @@ class View {
       include_once("title.php");
  	}
  
-	public function renderList($CategoryResult, $CategorySelected)
+	public function renderList($CategoryResult, $CategorySelected, $ListResult)
  	{
- 	   echo "$CategoryResult"."here!!!";
  		  //$shoppingCart = $this->model->getCart();
       include_once("list.php");
  	}

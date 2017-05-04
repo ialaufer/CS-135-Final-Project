@@ -67,6 +67,6 @@ INTO TABLE ServiceItem
 COLUMNS TERMINATED BY ','
 OPTIONALLY ENCLOSED BY '"'
 LINES TERMINATED BY '\r'
-(providerName, providerAddress, providerEmail, providerPhone, providerPhone, serviceItemName, serviceDescription, categoryId, servicePrice)
+(providerName, providerAddress, providerEmail, providerPhone, serviceItemName, serviceDescription, categoryId, servicePrice)
 
 ;

@@ -25,7 +25,7 @@
             foreach ($CategoryResult as $categoryname => $imagepath) {
                 $name = $string = str_replace(' ', '', $categoryname);
                 echo " <td align='center' valign='center'>
-                          <button type='submit' name='$categoryname' >
+                          <button type='submit' name='$categoryname'>
                           <img src='$imagepath' name='$name' style='width:150px;height:150px;'>
                           </button>
                        <br/> $categoryname </td>

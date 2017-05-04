@@ -100,6 +100,54 @@ class Model{
 			return $selectedCategory;
 	}
 
+
+
+		public function get_serviceList($cid) {
+			$dbc    = connect_to_db( "serviceitems" );	
+			$query  = "SELECT * FROM SERVICEITEM WHERE categoryId = '$cid'";
+			$result = perform_query( $dbc, $query );
+			$arr = Array();
+			while ($row = mysqli_fetch_array( $result, MYSQLI_ASSOC )){
+			
+				$providerName = $row['providerName'];
+				$providerAddress = $row['providerAddress'];
+				$providerEmail = $row['providerEmail'];
+				$providerPhone = $row['providerPhone'];
+				
+				$serviceItemName = $row['serviceItemName']; 
+				$serviceDescription = $row['serviceDescription'];
+				$categoryId = $row['categoryId'];
+				$servicePrice= $row['servicePrice'];
+
+				$dispaly = "<div class='list items'>
+				<h3>$servicename</h3>, 
+				<h4>Provider information:</h4>
+				<p class='provider information'>
+					$providerName<br>
+					$providerAddress<br>
+					providerEmail<br>
+					ProviderPhone<br>
+				<p> 
+				<p class='description'>$serviceDescription</p>
+				<p class='price'>$servicePrice</p>
+				</div>\n";
+		}
+			
+		
+		disconnect_from_db( $dbc, $result );
+		return $dispaly;
+	}
+
+	public function get_id($cname){
+		//given a cateogry name, return a category id
+		$dbc    = connect_to_db( "serviceitems" );	
+		$query  = "SELECT id FROM CATEGORY WHERE name = '$cname'";
+		$result = perform_query( $dbc, $query );
+		$row = mysqli_fetch_row($result);
+		return $row[0];
+	}
+
+
 		public function get_email(){
 			$dbc    = connect_to_db( "serviceitems" );	
 			$query  = "SELECT * FROM PROVIDER";
