@@ -57,6 +57,10 @@ function sendEmail() {
 <form name="checkout" method="post">
     <script src="public/js/validate.js"></script>
     <h1>Book Service</h1>
+    <p>You are going to book: 
+    <?php echo "$service";
+    ?>
+    <p>
     <h2>Customer Info</h2>        
         <legend for="name">Name
         <input type="text" name="name" value="" onBlur="validateField(this)" id="name"><span class='info'></span></legend>

@@ -22,14 +22,14 @@
 
       if($_GET != null) {
 
-      if(array_key_exists('add', $_GET)) {
-        $this->view->renderAdd();
-      }  
+        if(array_key_exists('add', $_GET)) {
+            $this->view->renderAdd();
+        }  
 
-      if(array_key_exists('book', $_GET)) {
-        echo "book";
-        $this->view->renderRequest();
-      }  
+        if(array_key_exists('book', $_GET)) {
+            $this->view->renderRequest($_GET['book']);
+        }
+            
         foreach ($_GET as $key => $cid) {
           $name = str_replace('_', ' ', $key);
           if (array_key_exists($name, $CategoryResult)) {

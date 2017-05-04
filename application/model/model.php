@@ -77,7 +77,7 @@ class Model{
 				<p class='price'>Price: $servicePrice</p>
 				</div>
 				<form method='get'>
-    			<button type='submit' style='width:750px;height:50px;background-color: #4CAF50;' name='book';>Book Service</button>
+    			<button type='submit' style='width:750px;height:50px;background-color: #4CAF50;' name='book' value =$serviceItemName;>Book Service</button>
    				</form>
 				\n";
 				
