@@ -64,10 +64,12 @@ li a:hover:not(.active) {
 ?>
   <h3>Some heading</h3>
 <?php
- echo $ListResult;
+  foreach ($ListResult as $key => $display) {
+    echo $display;
+  }
 ?>
 </div>
-
+    <pre> <?php print_r($ListResult);?> </pre>
 </body>
 </html>
 

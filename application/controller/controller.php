@@ -27,7 +27,6 @@
         foreach ($_GET as $key => $cid) {
           $name = str_replace('_', ' ', $key);
           if (array_key_exists($name, $CategoryResult)) {
-            echo "$CategoryResult"."HHHHHere!!!";
             $cid = $this->model ->get_id($name);
             $ListResult = $this->model ->get_serviceList($cid);
             $this->view->renderList($CategoryResult, $key, $ListResult);

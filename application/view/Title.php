@@ -21,17 +21,23 @@
     <table style='width:750px;'>
     <tr>
       <?php 
-
+            $counter = 0;
             foreach ($CategoryResult as $categoryname => $imagepath) {
                 $name = $string = str_replace(' ', '', $categoryname);
-                echo " <td align='center' valign='center'>
+                if ($counter%4 == 0) { echo "<tr>"; }
+                echo 
+                  " <td align='center' valign='center'>
                           <button type='submit' name='$categoryname'>
                           <img src='$imagepath' name='$name' style='width:150px;height:150px;'>
                           </button>
-                       <br/> $categoryname </td>
-                ";
+                       <br/> $categoryname </td>";
+                  $counter++;
+                  if ($counter%4 == 0) { echo "</tr>"; } 
+                    
             }
       ?>
+      
+
 
     </tr>
     </table>
