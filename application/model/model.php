@@ -65,9 +65,9 @@ class Model{
 
 				
 				$display[$serviceItemName] = "<div class='list items'>
-				<h3>$serviceItemName</h3>
-				<h4>Provider information:</h4>
-				<p class='provider information'>
+				<h3 class='service'>$serviceItemName</h3>
+				<h4 class='providerInformation'>Provider information:</h4>
+				<p class='providerInformation'>
 					$providerName<br>
 					$providerAddress<br>
 					$providerEmail<br>

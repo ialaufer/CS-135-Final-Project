@@ -5,6 +5,8 @@
 <style>
 body {
     margin: 0;
+    font-family: "avenir-roman";
+    margin: auto;
 }
 
 ul {
@@ -17,7 +19,19 @@ ul {
     height: 100%;
     overflow: auto;
 }
-
+.service{
+  color: #ff9933;
+}
+.price{
+   color: #b35900
+}
+.providerInformation{
+  color: red;
+}
+.description{
+  margin-right:45%;
+  text-align: left;
+}
 li a {
     display: block;
     color: #000;
@@ -34,6 +48,9 @@ li a:hover:not(.active) {
     background-color: #555;
     color: white;
 }
+.linkbutton{
+  margin:auto;
+}
 </style>
 </head>
 <body>
@@ -45,7 +62,7 @@ li a:hover:not(.active) {
       echo "<li><a class='active' href='#home'>$categoryname</a></li>";
     }
     else {
-      echo "<li><a href='#news'>$categoryname</a></li>";
+      echo "<li><a class href='#news'>$categoryname</a></li>";
     }
   }
 ?>
@@ -54,15 +71,15 @@ li a:hover:not(.active) {
 <div style="margin-left:25%;padding:1px 16px;height:1000px;">
 <?php
   $name = $string = str_replace('_', ' ', $CategorySelected);
-  echo "<h1> $name </h1>" 
+  echo "<h1> $name</h1>" 
   ?>
   <?php
   foreach ($ListResult as $key => $display) {
     echo $display;
   }
 ?>
-
-<a class = "linkbutton" href= '../CS-135-Final-Project/' style='width:250px;height:20px;background-color: #4CAF50;'>
+<a class = "linkbutton" href= '../CS-135-Final-Project/' 
+style='margin-left:auto;margin-right:auto;width:250px;height:20px;background-color: #0066ff;color:white;padding:5px; boarder: 1px'>
 <span class = "small"  > Home </span> </a>
 </div>
   
