@@ -57,12 +57,16 @@ li a:hover:not(.active) {
 
 <ul>
 <?php
-  foreach ($CategoryResult as $categoryname => $imagepath) {
+  foreach ($CategoryResult as $categoryname => $value) {
     if ($categoryname == str_replace('_', ' ', $CategorySelected)){
-      echo "<li><a class='active' href='#home'>$categoryname</a></li>";
+      echo "
+      <li><a class='active'>$categoryname</a></li></form>";
     }
     else {
-      echo "<li><a class href='#news'>$categoryname</a></li>";
+      $link = str_replace('_', '+', $categoryname);
+      $link = '?'.$categoryname."=";
+      echo "
+      <li><a href='$link' name='$categoryname'>$categoryname</a></li>";
     }
   }
 ?>
