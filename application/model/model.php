@@ -92,7 +92,7 @@ class Model{
 		disconnect_from_db( $dbc, $result );
 		return $arr;
 	}
-		public fucntion get_ProviderEmail(){
+		public function get_ProviderEmail(){
 			$dbc    = connect_to_db( "serviceitems" );	
 			$query  = "SELECT * FROM SERVICEITEM";
 			$result = perform_query( $dbc, $query );
@@ -102,6 +102,7 @@ class Model{
 				$providerEmail = $row['providerEmail'];
 				$arr[$serviceItemName] = $providerEmail;
 			return $arr;
+		}
 		}
 
 
