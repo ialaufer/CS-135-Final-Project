@@ -92,6 +92,17 @@ class Model{
 		disconnect_from_db( $dbc, $result );
 		return $arr;
 	}
+		public fucntion get_ProviderEmail(){
+			$dbc    = connect_to_db( "serviceitems" );	
+			$query  = "SELECT * FROM SERVICEITEM";
+			$result = perform_query( $dbc, $query );
+			$arr = Array();
+			while ($row = mysqli_fetch_array( $result, MYSQLI_ASSOC )){
+				$serviceItemName = $row['serviceItemName'];
+				$providerEmail = $row['providerEmail'];
+				$arr[$serviceItemName] = $providerEmail;
+			return $arr;
+		}
 
 
 		public function get_selectedCategory() {
@@ -99,42 +110,6 @@ class Model{
 			disconnect_from_db( $dbc, $result );
 			return $selectedCategory;
 	}
-
-		public function get_email(){
-			$dbc    = connect_to_db( "serviceitems" );	
-			$query  = "SELECT * FROM PROVIDER";
-			$result = perform_query( $dbc, $query );
-			
-			while ($row = mysqli_fetch_array( $result, MYSQLI_ASSOC )){
-			
-				$providername = $row['name'];
-				$providerid  = $row['id'];
-				$provideremail = $row['email'];
-			   
-			   	echo "<option value = '$providerid' selected> $provideremail  </option>\n"; 
-		}
-			
-		echo "</select>";
-		disconnect_from_db( $dbc, $result );
-	}
-	/*
-		public function get_services($imagecategoryID){
-		$dbc    = connect_to_db( "serviceitems" );	
-		$query  = "SELECT * FROM ServiceItem WHERE catagoryID == $imagecategoryID";
-		$result = perform_query( $dbc, $query );
-		
-		while ($row = mysqli_fetch_array( $result, MYSQLI_ASSOC )){
-		
-			$categoryname = $row['name'];
-			$categoryid  = $row['id'];
-			$imagepath = $row['imagepath'];
-		   
-				echo "<option value = '$categoryid' selected> $categoryname  </option>\n"; 
-		}
-			
-		echo "</select>";
-		disconnect_from_db( $dbc, $result );
-	}*/
 }
 
 ?>
