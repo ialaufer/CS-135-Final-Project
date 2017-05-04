@@ -75,7 +75,8 @@ class Model{
 				<p> 
 				<p class='description'>$serviceDescription</p>
 				<p class='price'>Price: $servicePrice</p>
-				</div>\n";
+				</div>
+				\n";
 				
 		}
 			
@@ -113,5 +114,4 @@ class Model{
 	}
 	
 }
-
 ?>

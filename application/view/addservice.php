@@ -14,13 +14,14 @@ input[type=text], select, textarea {
     resize: vertical;
 }
 
-input[type=submit] {
+input[type=submit], input[type=reset]{
     background-color: #4CAF50;
     color: white;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 12px;
 }
 
 input[type=submit]:hover {
@@ -80,7 +81,7 @@ input[type=submit]:hover {
         </legend>
         <legend for="price">Price
         <input type="text" name="price" id="price" value="" <span class='info'></span></legend>
-        <p><input type="button" value="Submit request" onBlur="addnewservice()"/><span class='info'></span></p>
+        <p><input type="submit" value="Submit request" onBlur="addnewservice()"><span class='info'></span></p>
         <p><input type="reset"></p>
   
         
@@ -88,7 +89,7 @@ input[type=submit]:hover {
 
 
 <a class = "linkbutton" href= '../CS-135-Final-Project/' style='width:250px;height:20px;background-color: #4CAF50;'>
-<span class = "small"  > Browse Other Services </span> </a>
+<span class = "small" > Browse Other Services </span> </a>
 
 </body>
 </html>
