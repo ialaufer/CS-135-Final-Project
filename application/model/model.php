@@ -100,7 +100,7 @@ class Model{
 	}
 
 
-		public function get_email(){
+	public function get_email(){
 			$dbc    = connect_to_db( "serviceitems" );	
 			$query  = "SELECT * FROM PROVIDER";
 			$result = perform_query( $dbc, $query );
