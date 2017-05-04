@@ -23,6 +23,13 @@
 button:hover {
     opacity: 0.8;
 }
+.Heading{
+  text-align: center;
+  font-family: "avenir-roman";
+}
+.Centered{
+  text-align: center;
+}
   </style>>
   <head>
     <title>Claremont Yelp</title> 
@@ -30,12 +37,11 @@ button:hover {
   
 
   <!--<link rel ="stylesheet" href="../../public/css/validate.css"> -->
-  <link rel="stylesheet" href="/Applications/MAMP/htdocs/cs135/GITHUB_REPO/CS-135-Final-Project/startbootstrap-shop-homepage-gh-pages/css/shop-homepage.css " >
+  <link rel="stylesheet" href="/Applications/MAMP/htdocs/cs135/GITHUB_REPO/CS-135-Final-Project/public/css/startbootstrap-shop-homepage-gh-pages/css/bootstrap.min.css " >
 
    
-  <body>
-    <h1> Claremont Yelp </h1>
-    
+  <body class="Heading" >
+    <h1 class="Centered"> Claremont Yelp </h1>
     <form method="get">
     <table style='width:750px;'>
     <tr>
