@@ -1,8 +1,3 @@
-<?php
-?>
-
-<!-- call getCategory -->
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,8 +56,8 @@ li a:hover:not(.active) {
 <?php
   $name = $string = str_replace('_', ' ', $CategorySelected);
   echo "<h2> $name </h2>" 
-?>
-<?php
+  ?>
+  <?php
   foreach ($ListResult as $key => $display) {
     echo $display;
   }

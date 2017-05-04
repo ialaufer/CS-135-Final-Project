@@ -4,39 +4,8 @@
 class Model{
 
 	public function __construct()  { 
-	echo "model";
 	}
 
-/*
-	public function handle_form( $id ){
-		echo "**********CATEGORY************** <br><br>";
-		$dbc    = connect_to_db( "serviceitems" );	
-		$query  = "SELECT * FROM CATEGORY WHERE id = $id ";
-		$result = perform_query( $dbc, $query );
-
-		#$row = mysqli_fetch_array( $result, MYSQLI_ASSOC );
-		
-		#echo "********** <br>";
-		#print_r($row);
-		#echo "********** <br>";
-		echo "<ul>\n";
-		while ( $row = mysqli_fetch_array( $result, MYSQLI_ASSOC ) ) {
-				
-			$categoryname = $row['id'];
-			$categoryid  = $row['year'];
-				   
-			echo "<li>Title: $title, Year: $year, Director: $director </li>\n";
-		}
-		echo "</ul>\n";
-		
-		disconnect_from_db( $dbc, $result );
-	}
-
-	public function send_category( $id ){
-
-	}
-
-	*/
 		public function get_categories() {
 			$dbc    = connect_to_db( "serviceitems" );	
 			$query  = "SELECT * FROM CATEGORY";
@@ -78,13 +47,11 @@ class Model{
 
 
 		public function get_serviceList($cid) {
-			echo $cid;
 			$dbc    = connect_to_db( "serviceitems" );	
 			$query  = "SELECT * FROM SERVICEITEM WHERE categoryId = '$cid'";
 			$result = perform_query( $dbc, $query );
 			$display = Array();
 			while ($row = mysqli_fetch_array( $result, MYSQLI_ASSOC )){
-				echo "???";
 				$providerName = $row['providerName'];
 
 				$providerAddress = $row['providerAddress'];
@@ -144,24 +111,7 @@ class Model{
 		echo "</select>";
 		disconnect_from_db( $dbc, $result );
 	}
-	/*
-		public function get_services($imagecategoryID){
-		$dbc    = connect_to_db( "serviceitems" );	
-		$query  = "SELECT * FROM ServiceItem WHERE catagoryID == $imagecategoryID";
-		$result = perform_query( $dbc, $query );
-		
-		while ($row = mysqli_fetch_array( $result, MYSQLI_ASSOC )){
-		
-			$categoryname = $row['name'];
-			$categoryid  = $row['id'];
-			$imagepath = $row['imagepath'];
-		   
-				echo "<option value = '$categoryid' selected> $categoryname  </option>\n"; 
-		}
-			
-		echo "</select>";
-		disconnect_from_db( $dbc, $result );
-	}*/
+	
 }
 
 ?>

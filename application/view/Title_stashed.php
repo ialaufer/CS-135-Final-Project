@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
   <style>
   button {
@@ -26,7 +25,7 @@ button:hover {
 .Centered{
   text-align: center;
 }
-  </style>>
+  </style>
   <head>
     <title>Claremont Yelp</title> 
   </head>
@@ -37,7 +36,7 @@ button:hover {
 
    
   <body class="Heading" >
-    <h1 class="Centered"> Claremont Yelp </h1>
+    <h1 class="Centered"> Claremont's Yelp! </h1>
     <form method="get">
     <table style='width:750px;'>
     <tr>
@@ -45,7 +44,7 @@ button:hover {
             $counter = 0;
             foreach ($CategoryResult as $categoryname => $imagepath) {
                 $name = $string = str_replace(' ', '', $categoryname);
-                if ($counter%3 == 0) { echo "<tr>"; }
+                if ($counter%4 == 0) { echo "<tr>"; }
                 echo 
                   " <td align='center' valign='center'>
                           <button type='submit' name='$categoryname'>
@@ -53,7 +52,7 @@ button:hover {
                           </button>
                        <br/> $categoryname </td>";
                   $counter++;
-                  if ($counter%3 == 0) { echo "</tr>"; } 
+                  if ($counter%4 == 0) { echo "</tr>"; } 
                     
             }
       ?>
@@ -63,14 +62,5 @@ button:hover {
 
     <form method="get">
     <button type="submit" style='width:750px;height:50px;background-color: #4CAF50;' name="add";>Add New Service</button>
-    </form>
-    <pre> <?php print_r($_GET);?> </pre>
-
-    <?php
-
-//    if ( isset( $_GET['submitted'] ) )
-//      handle_form( $_GET['categories'] );
-//    display_category( "categories" );
-//    ?>
   </body>
 </html>

@@ -4,7 +4,7 @@
 class Model{
 
 	public function __construct()  { 
-	echo "model";
+	//echo "model";
 	}
 //add_item
 //add_customer
@@ -118,10 +118,10 @@ class Model{
 			$dbc    = connect_to_db( "serviceitems" );	
 			$query  = "SELECT * FROM SERVICEITEM WHERE categoryId = '$cid'";
 			$result = perform_query( $dbc, $query );
-			$arr = Array();
+			$display = Array();
 			while ($row = mysqli_fetch_array( $result, MYSQLI_ASSOC )){
-			
 				$providerName = $row['providerName'];
+
 				$providerAddress = $row['providerAddress'];
 				$providerEmail = $row['providerEmail'];
 				$providerPhone = $row['providerPhone'];
@@ -131,23 +131,25 @@ class Model{
 				$categoryId = $row['categoryId'];
 				$servicePrice= $row['servicePrice'];
 
-				$dispaly = "<div class='list items'>
-				<h3>$servicename</h3>, 
+				
+				$display[$serviceItemName] = "<div class='list items'>
+				<h3>$serviceItemName</h3>
 				<h4>Provider information:</h4>
 				<p class='provider information'>
 					$providerName<br>
 					$providerAddress<br>
-					providerEmail<br>
-					ProviderPhone<br>
+					$providerEmail<br>
+					$providerPhone<br>
 				<p> 
 				<p class='description'>$serviceDescription</p>
-				<p class='price'>$servicePrice</p>
+				<p class='price'>Price: $servicePrice</p>
 				</div>\n";
+				
 		}
 			
 		
 		disconnect_from_db( $dbc, $result );
-		return $dispaly;
+		return $display;
 	}
 
 	public function get_id($cname){
