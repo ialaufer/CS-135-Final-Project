@@ -29,7 +29,9 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #45a049;
 }
-
+body{
+    font-family: "avenir-roman";
+}
 .container {
     border-radius: 5px;
     background-color: #f2f2f2;
@@ -75,14 +77,14 @@ function sendEmail() {
         <h3>Note to provider:</h3>
         <legend for="note">
         <input type="text" name="note" id="note" value="" <span class='info'></span></legend>
-        <p><input type="button" value="Submit request" onBlur="sendEmail()"/><span class='info'></span></p>
-        <p><input type="reset"></p>
+        <p><input type="submit" value="Submit request" onBlur="sendEmail()"/><span class='info'></span>
+        <input type="submit"></p>
   
         
     </form></div>
 
 
-<a class = "linkbutton" href= '../CS-135-Final-Project/' style='width:250px;height:20px;background-color: #4CAF50;'>
+<a class = "linkbutton" href= '../CS-135-Final-Project/' style='margin-left:2%;border-style:solid;width:250px;height:20px;background-color: #0066ff;color:white;padding:5px; boarder: 1px'>
 <span class = "small" > Browse More Services </span> </a>
 
 </body>

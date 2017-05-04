@@ -32,6 +32,7 @@ input[type=submit]:hover {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
+    margin-left: 0%;
 }
 </style>
 </style>
@@ -43,12 +44,12 @@ input[type=submit]:hover {
 </head>
 
 
-<body>
+<body style='font-family:avenir-roman;'>
 
 <div class="container">
 <form name="newservice" method="post">
     <script src="public/js/validate.js"></script>
-    <h2>Provider Info</h2>        
+    <h2>Provider Information</h2>        
         <legend for="name">Name
         <input type="text" name="name" value="" onBlur="validateField(this)" id="name"><span class='info'></span></legend>
         <legend for="address">Address
@@ -58,7 +59,7 @@ input[type=submit]:hover {
         <legend for="phone">Phone
         <input type="text" name="phone" id="phone" value="" onBlur="validateField(this)"><span class='info'></span></legend>
 
-    <h2>Service information</h2>
+    <h2>Service Information</h2>
         <legend for="servicename">Name of service
         <input type="text" name="servicename" id="servicename" value="" <span class='info'>
         </span></legend>
@@ -81,14 +82,14 @@ input[type=submit]:hover {
         </legend>
         <legend for="price">Price
         <input type="text" name="price" id="price" value="" <span class='info'></span></legend>
-        <p><input type="submit" value="Submit request" onBlur="addnewservice()"><span class='info'></span></p>
-        <p><input type="reset"></p>
+        <p><input type="submit" value="Submit request" onBlur="addnewservice()"><span class='info'></span>
+        <input type="reset"></p>
   
         
     </form></div>
 
 
-<a class = "linkbutton" href= '../CS-135-Final-Project/' style='width:250px;height:20px;background-color: #4CAF50;'>
+<a type="button" class = "linkbutton" href= '../CS-135-Final-Project/' style='margin-left:2%;border-style:solid;width:250px;height:20px;background-color: #0066ff;color:white;padding:5px; boarder: 1px'>
 <span class = "small" > Browse Other Services </span> </a>
 
 </body>
