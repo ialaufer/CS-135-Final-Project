@@ -43,7 +43,7 @@ button:hover {
             $counter = 0;
             foreach ($CategoryResult as $categoryname => $imagepath) {
                 $name = $string = str_replace(' ', '', $categoryname);
-                if ($counter%4 == 0) { echo "<tr>"; }
+                if ($counter%3 == 0) { echo "<tr>"; }
                 echo 
                   " <td align='center' valign='center'>
                           <button type='submit' name='$categoryname'>
@@ -51,7 +51,7 @@ button:hover {
                           </button>
                        <br/> $categoryname </td>";
                   $counter++;
-                  if ($counter%4 == 0) { echo "</tr>"; } 
+                  if ($counter%3 == 0) { echo "</tr>"; } 
                     
             }
       ?>
@@ -61,7 +61,7 @@ button:hover {
 
     <form method="get">
     <button type="submit" style='width:750px;height:50px;background-color: #4CAF50;' name="add";>Add New Service</button>
-    </form>>
+    </form>
     <pre> <?php print_r($_GET);?> </pre>
 
     <?php
