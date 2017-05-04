@@ -27,7 +27,9 @@
         }  
 
         if(array_key_exists('book', $_GET)) {
-            $this->view->renderRequest($_GET['book']);
+            $name = str_replace('_', ' ', $_GET['book']);
+            $name = str_replace(';', '', $name);
+            $this->view->renderRequest($name);
         }
             
         foreach ($_GET as $key => $cid) {

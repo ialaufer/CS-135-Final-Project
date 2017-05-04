@@ -58,7 +58,7 @@ li a:hover:not(.active) {
 <ul>
 <?php
   foreach ($CategoryResult as $categoryname => $imagepath) {
-    if ($categoryname == $CategorySelected) {
+    if ($categoryname == str_replace('_', ' ', $CategorySelected)){
       echo "<li><a class='active' href='#home'>$categoryname</a></li>";
     }
     else {

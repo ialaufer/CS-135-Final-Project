@@ -58,9 +58,8 @@ function sendEmail() {
     <script src="public/js/validate.js"></script>
     <h1>Book Service</h1>
     <p>You are going to book: 
-    <?php echo "$service";
-    ?>
-    <p>
+    <?php echo $service?>
+    </p>
     <h2>Customer Info</h2>        
         <legend for="name">Name
         <input type="text" name="name" value="" onBlur="validateField(this)" id="name"><span class='info'></span></legend>
@@ -83,7 +82,8 @@ function sendEmail() {
     </form></div>
 
 
-<p><a href="application/view/index.php">Look around some more</a></p>
+<a class = "linkbutton" href= '../CS-135-Final-Project/' style='width:250px;height:20px;background-color: #4CAF50;'>
+<span class = "small" > Browse More Services </span> </a>
 
 </body>
 </html>
