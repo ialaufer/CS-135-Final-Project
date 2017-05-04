@@ -1,7 +1,4 @@
 <?php 
-require "../model/model.php";
-include "../email.php";
-session_start(); 
 ?>
 
 <!DOCTYPE html>
