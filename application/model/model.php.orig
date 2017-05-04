@@ -63,11 +63,13 @@ class Model{
 				$categoryId = $row['categoryId'];
 				$servicePrice= $row['servicePrice'];
 
-				
+				$name = str_replace(' ', '_', $serviceItemName);
+				echo $name ."name";
+
 				$display[$serviceItemName] = "<div class='list items'>
-				<h3 class='service'>$serviceItemName</h3>
-				<h4 class='providerInformation'>Provider information:</h4>
-				<p class='providerInformation'>
+				<h3>$serviceItemName</h3>
+				<h4>Provider information:</h4>
+				<p class='provider information'>
 					$providerName<br>
 					$providerAddress<br>
 					$providerEmail<br>
@@ -78,7 +80,11 @@ class Model{
 				</div>
 				<div style='text-align:center'>
 				<form method='get'>
+<<<<<<< HEAD
+    			<button type='submit' style='width:750px;height:50px;background-color: #4CAF50;' name='book' value =$name;>Book Service</button>
+=======
     			<button style='font-family:avenir-roman; background-color: green; color:white ' class='w3-circle' type='submit' style='width:150px;height:50px;background-color: #4CAF50;' name='book' value =$serviceItemName;>Book Service</button>
+>>>>>>> 7913cc615ddfb32a2b2c2566322c62405e5288e3
    				</form>
    				</div>
 				\n";
