@@ -62,15 +62,16 @@ li a:hover:not(.active) {
   $name = $string = str_replace('_', ' ', $CategorySelected);
   echo "<h2> $name </h2>" 
 ?>
-  <h3>Some heading</h3>
 <?php
   foreach ($ListResult as $key => $display) {
     echo $display;
   }
 ?>
+
+<a class = "linkbutton" href= '../CS-135-Final-Project/' style='width:250px;height:20px;background-color: #4CAF50;'>
+<span class = "small"  > Home </span> </a>
 </div>
-    <pre> <?php print_r($ListResult);?> </pre>
+  
 </body>
-</html>
 
 </html>

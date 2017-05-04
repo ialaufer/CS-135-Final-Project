@@ -32,7 +32,12 @@
             $this->view->renderList($CategoryResult, $key, $ListResult);
           }
         }
+      }
 
+      print_r($_GET);
+
+      if(array_key_exists('add', $_GET)) {
+        $this->view->renderAdd();
       }  
 
       //print_r($CategoryResult);
@@ -47,5 +52,6 @@
      //Need to start connecting these to title pages
     }
     */
-  }}
+  }
+}
 ?>

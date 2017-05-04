@@ -4,7 +4,26 @@
 <!-- call getCategory -->
 
 <!DOCTYPE html>
+  <style>
+  button {
+    background-color: white;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
 
+  button:hover {
+    opacity: 0.8;
+  }
+}
+
+button:hover {
+    opacity: 0.8;
+}
+  </style>>
   <head>
     <title>Claremont Yelp</title> 
   </head>
@@ -36,15 +55,13 @@
                     
             }
       ?>
-      
-
-
     </tr>
     </table>
     </form>
 
-
-    
+    <form method="get">
+    <button type="submit" style='width:750px;height:50px;background-color: #4CAF50;' name="add";>Add New Service</button>
+    </form>>
     <pre> <?php print_r($_GET);?> </pre>
 
     <?php

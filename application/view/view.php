@@ -15,8 +15,12 @@ class View {
 	public function renderList($CategoryResult, $CategorySelected, $ListResult)
  	{
  		echo $ListResult."here";
- 		  //$shoppingCart = $this->model->getCart();
       include_once("list.php");
+ 	}
+
+ 	public function renderAdd()
+ 	{
+      include_once("addservce.php");
  	}
  
 
