@@ -76,9 +76,11 @@ class Model{
 				<p class='description'>$serviceDescription</p>
 				<p class='price'>Price: $servicePrice</p>
 				</div>
+				<div style='text-align:center'>
 				<form method='get'>
-    			<button type='submit' style='width:750px;height:50px;background-color: #4CAF50;' name='book' value =$serviceItemName;>Book Service</button>
+    			<button style='font-family:avenir-roman; background-color: green; color:white ' class='w3-circle' type='submit' style='width:150px;height:50px;background-color: #4CAF50;' name='book' value =$serviceItemName;>Book Service</button>
    				</form>
+   				</div>
 				\n";
 				
 		}
