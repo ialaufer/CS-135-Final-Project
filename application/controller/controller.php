@@ -21,6 +21,15 @@
       }
 
       if($_GET != null) {
+
+      if(array_key_exists('add', $_GET)) {
+        $this->view->renderAdd();
+      }  
+
+      if(array_key_exists('book', $_GET)) {
+        echo "book";
+        $this->view->renderRequest();
+      }  
         foreach ($_GET as $key => $cid) {
           $name = str_replace('_', ' ', $key);
           if (array_key_exists($name, $CategoryResult)) {
@@ -31,9 +40,7 @@
         }
       }
 
-      if(array_key_exists('add', $_GET)) {
-        $this->view->renderAdd();
-      }  
+
   }
 }
 ?>
