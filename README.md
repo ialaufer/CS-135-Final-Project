@@ -4,13 +4,13 @@
 We want to make a website for students at the Claremont Colleges to advertise their skills, e.g, hairstyling, makeup, photography, sewing, consulting, etc.  and to look for people with those skills. It would be similar to Yelp, but only for services and for 5C students. A user can request a service on a specific provider’s page which includes sending a personalized email to the provider’s email address. They can also add a service by adding their information and relevant required information of their service.
 
 ### Possible Implementations
-For Users Acting as Customers:
+For users acting as customers:
 - They can search and browse for services by categories and subcategories
 - They can see rates and descriptions of the service
 - They can see the service provider's contact information 
 - They can send an email to set up an appointment
 
-For Users Acting as Service Providers:
+For users acting as service providers:
 - They can post their services
   - Add contact information
   - Update description of services: categories, price range, location
