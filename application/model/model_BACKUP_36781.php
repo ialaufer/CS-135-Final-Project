@@ -111,6 +111,7 @@ class Model{
 			disconnect_from_db( $dbc, $result );
 			return $selectedCategory;
 	}
+<<<<<<< HEAD
 
 
 
@@ -195,6 +196,8 @@ class Model{
 		echo "</select>";
 		disconnect_from_db( $dbc, $result );
 	}*/
+=======
+>>>>>>> 0970a45108362741609f2022cd4de749fd200fa9
 }
 
 ?>

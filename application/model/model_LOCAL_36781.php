@@ -92,18 +92,6 @@ class Model{
 		disconnect_from_db( $dbc, $result );
 		return $arr;
 	}
-		public function get_ProviderEmail(){
-			$dbc    = connect_to_db( "serviceitems" );	
-			$query  = "SELECT * FROM SERVICEITEM";
-			$result = perform_query( $dbc, $query );
-			$arr = Array();
-			while ($row = mysqli_fetch_array( $result, MYSQLI_ASSOC )){
-				$serviceItemName = $row['serviceItemName'];
-				$providerEmail = $row['providerEmail'];
-				$arr[$serviceItemName] = $providerEmail;
-			return $arr;
-		}
-		}
 
 
 		public function get_selectedCategory() {
