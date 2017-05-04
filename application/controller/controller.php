@@ -21,16 +21,17 @@
       $this->view->renderTitle($CategoryResult);
 
 
-      foreach ($_GET as $key => $value) {
-        if (in_array($key,$CategoryResult)) {
-
+      foreach ($_GET as $key => $Value) {
+        echo "$key"."key";
+        if (array_key_exists($key,$CategoryResult)) {
+          echo "$CategoryResult"."HHHHHere!!!";
           $this->view->renderList($CategoryResult, $key);
 
         }
 
-      }
+      }  
 
-
+      //print_r($CategoryResult);
         
       /*
       if($_POST(image.id.clicked)){
