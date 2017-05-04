@@ -23,7 +23,7 @@ class View {
       include_once("addservice.php");
  	}
 
- 	public function renderRequest()
+ 	public function renderRequest($service)
  	{
       include_once("requestservice.php");
  	}
