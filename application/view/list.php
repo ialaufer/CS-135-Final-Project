@@ -85,7 +85,7 @@ li a:hover:not(.active) {
 ?>
 <div style='text-align:center;'>
 <a class = "linkbutton" href= '../CS-135-Final-Project/' 
-style='border-style:solid;width:250px;height:20px;background-color: #0066ff;color:white;padding:5px; boarder: 1px'>
+style='border-style:solid;background-color:#0066ff;font-size:75%;color:white;padding:5px; boarder-width: 5px'>
 <span class = "small"  > Home </span> </a>
 </div>
   
