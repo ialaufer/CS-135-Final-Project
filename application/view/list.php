@@ -6,6 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Try it</title>
 <style>
 body {
     margin: 0;
@@ -56,7 +57,11 @@ li a:hover:not(.active) {
 </ul>
 
 <div style="margin-left:25%;padding:1px 16px;height:1000px;">
-  <h2>$CategorySelected </h2>
+  <h1>List Page</h1>
+<?php
+  $name = $string = str_replace('_', ' ', $CategorySelected);
+  echo "<h2> $name </h2>" 
+?>
   <h3>Some heading</h3>
   <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
   <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p>

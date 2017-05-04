@@ -18,15 +18,18 @@
     public function invoke() {
 
       $CategoryResult = $this->model -> get_categories();
-      $this->view->renderTitle($CategoryResult);
+      
+      if($_GET == null) {
+          $this->view->renderTitle($CategoryResult);
+      }
 
-
-      foreach ($_GET as $key => $Value) {
-        echo "$key"."key";
-        if (array_key_exists($key,$CategoryResult)) {
-          echo "$CategoryResult"."HHHHHere!!!";
-          $this->view->renderList($CategoryResult, $key);
-
+      if($_GET != null) {
+        foreach ($_GET as $key => $Value) {
+          $name = str_replace('_', ' ', $key);
+          if (array_key_exists($name, $CategoryResult)) {
+            echo "$CategoryResult"."HHHHHere!!!";
+            $this->view->renderList($CategoryResult, $key);
+          }
         }
 
       }  
